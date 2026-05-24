@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form id = "form"action="processa.php" method="get">
+        <div>
+            <label for="nomeUser">Nome completo:</label>
+            <input id="nomeUser" type="text" name="nome">
+        </div>
+
+        <div>
+            <label for="assuntoMsg">Assunto:</label>
+            <select id="assuntoMsg" name="assunto"> 
+                <option value="duvida">Duvida</option>
+                <option value="matricula">Matricula</option>
+            </select>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+
+        const form = document.getElementById("form");
+
+        form.addEventListener('submit', function(evento){
+
+            evento.preventDefault();
+
+            const nome = document.getElementById("nomeUser")
+
+            if(nome.value = ""){
+                nome.style.backgroundColor = "red"
+                alert("O campo nome é obrigatório");
+            }
+        });
+
+
+    </script>
+</body>
+</html> 

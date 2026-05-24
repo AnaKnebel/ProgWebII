@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form id = "form"action="recebe_dados.php" method="post">
+        <div>
+            <label for="nomeUser">Nome completo:</label>
+            <input id="nomeUser" type="text" name="nome" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input id= "email" type="text" name="email" required>
+        </div>
+
+        <div>
+            <label for="assuntoMsg">Assunto:</label>
+            <select id="assuntoMsg" name="assunto" required> 
+                <option value="duvida">Duvida</option>
+                <option value="matricula">Matricula</option>
+            </select>
+        </div>
+
+        <div>
+            <textarea name="mensagem" id="mensagem" required>Digite aqui sua mensagem</textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html> 
